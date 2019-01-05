@@ -5,7 +5,6 @@ import com.test.headydemo.api.RequestApi
 import com.test.headydemo.base.BaseMvpPresenterImpl
 import com.test.headydemo.manager.ApiManager
 import com.test.headydemo.model.HeadyResponse
-import com.test.headydemo.model.Rankings
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.observers.DisposableObserver
@@ -49,7 +48,7 @@ class MainPresenter : BaseMvpPresenterImpl<MainContract.View>(),
 
     }
 
-    override fun saveCategoryData(t: HeadyResponse) {
+    override fun saveData(t: HeadyResponse) {
         Single.fromCallable {
             HeadyDemoApp.database?.categoryDao()?.insertCategories(t.categories)
         }.subscribeOn(Schedulers.io())
@@ -60,11 +59,7 @@ class MainPresenter : BaseMvpPresenterImpl<MainContract.View>(),
         }.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe()
-        /*Single.fromCallable {
-            HeadyDemoApp.database?.categoryDao()?.insert(categories)
-        }.subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe()*/
+
     }
 
     fun fetchFromDatabase() {
@@ -79,11 +74,5 @@ class MainPresenter : BaseMvpPresenterImpl<MainContract.View>(),
             }
     }
 
-    private fun insertRanking(rankings: List<Rankings>) {
-        Single.fromCallable {
-            HeadyDemoApp.database?.rankingDao()?.insertRankings(rankings)
-        }.subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe()
-    }
+
 }

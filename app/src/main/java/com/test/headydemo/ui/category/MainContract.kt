@@ -16,6 +16,6 @@ object MainContract {
 
     interface Presenter : BaseMvpPresenter<View> {
         fun requestApi()
-        fun saveCategoryData(t: HeadyResponse)
+        fun saveData(t: HeadyResponse)
     }
 }
