@@ -30,14 +30,12 @@ class MainPresenter : BaseMvpPresenterImpl<MainContract.View>(),
                 }
 
                 override fun onNext(t: HeadyResponse) {
-                    if(t.categories.isEmpty()){
+                    if (t.categories.isEmpty()) {
                         mView?.showMessage("No Data found")
-                    }else{
+                    } else {
                         mView?.showData(t.categories)
                     }
-
-
-                    saveCategoryData(t)
+                    saveData(t)
 
                 }
 

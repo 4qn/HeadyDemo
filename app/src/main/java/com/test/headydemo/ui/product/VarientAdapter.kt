@@ -7,7 +7,7 @@ import com.test.headydemo.R
 import com.test.headydemo.inflate
 import com.test.headydemo.model.Variants
 import kotlinx.android.synthetic.main.variant_dialog_item.view.*
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by Furqan on 05-01-2019.
@@ -48,7 +48,7 @@ class VarientAdapter(private val fragment: VarientDialogFragment, private val va
 
 
         override fun onClick(p: View?) {
-
+// variant related functionality
         }
 
 

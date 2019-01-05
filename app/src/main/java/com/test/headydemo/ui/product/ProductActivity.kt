@@ -2,15 +2,12 @@ package com.test.headydemo.ui.product
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.recyclerview.widget.GridLayoutManager
 import com.test.headydemo.R
 import com.test.headydemo.base.BaseActivity
 import com.test.headydemo.helper.Filter
 import com.test.headydemo.model.HeadyResponse
 import com.test.headydemo.model.Products
-import com.test.headydemo.ui.category.CategoryAdapter
-import com.test.headydemo.ui.products.ProductAdapter
 import kotlinx.android.synthetic.main.activity_product.*
 
 class ProductActivity : BaseActivity<ProductContract.View, ProductPresenter>(),

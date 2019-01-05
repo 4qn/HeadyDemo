@@ -1,24 +1,17 @@
-package com.test.headydemo.ui.products
+package com.test.headydemo.ui.product
 
 import android.graphics.Color
-import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.test.headydemo.R
 import com.test.headydemo.inflate
-import com.test.headydemo.model.Categories
 import com.test.headydemo.model.Products
 import com.test.headydemo.model.Variants
-import com.test.headydemo.ui.category.SubCatDialogFragment
-import com.test.headydemo.ui.product.ProductActivity
-import com.test.headydemo.ui.product.VarientDialogFragment
 import com.test.headydemo.utils.ProductDiffUtilCallback
-import kotlinx.android.synthetic.main.item_category.view.*
 import kotlinx.android.synthetic.main.item_product.view.*
 import java.util.*
-import kotlin.collections.ArrayList
 
 /**
  * Created by Furqan on 03-01-2019.
