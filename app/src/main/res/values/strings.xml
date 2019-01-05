@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">HeadyDemo</string>
+    <string name="filter">Filter</string>
+    <string name="variant">Variants</string>
+    <string name="sub_cat">Sub Category</string>
+    <string name="filte">Filter</string>
 </resources>
